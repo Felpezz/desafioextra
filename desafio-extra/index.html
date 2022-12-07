@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Mentoria</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- classe page criada pra setar o tamanho do <form> -->
+  <div class="page">
+    <header>
+      <h1>avalie a sua mentoria</h1>
+      <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+      <div class="img-div">
+        <img src="./assets/stars.svg" alt="">
+      </div>
+      
+    </header>
+
+    <form id="my-form">
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend class="first-legend">Informações pessoais</legend>
+          <div class="name-wrapper">
+            <div class="input-wrapper">
+              <label for="event-name">Nome</label>
+              <input type="text" id="event-name"
+               required 
+               placeholder="Seu nome">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-lastname">Sobrenome</label>
+              <input type="text" id="event-lastname"
+               placeholder="Seu sobrenome">
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="event-email">Email <span>(digite um email válido)</span></label>
+            <input type="email" id="event-email"
+             required
+             placeholder="seu@email.com">
+          </div>
+        </div>
+       
+
+      </fieldset>
+
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Informações do mentor</legend>
+            <div class="input-wrapper">
+              <label for="event-select">Selecione quem foi o seu mentor</label>
+              <select name="" id="event-select">
+                <option value="Ayrton Senna">Ayrton Senna</option>
+                <option value="Tafareu">Tafareu</option>
+                <option value="Silvío Santos">Silvío Santos</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="">Feedback sobre o mentor</label>
+              <textarea name="" id="" cols="30" rows="5"></textarea>
+            </div>
+            
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="event-doubt">
+              <label for="event-doubt">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+            </div>
+          
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <!-- fieldset-wrapper criada pra resolver o bug da legend que não aplica display flex-->
+        <div class="fieldset-wrapper">
+          <legend>Agendando a próxima mentoria</legend>
+          
+          <!-- classe criada pra posicionar os inputs ao lado do outro com o flex-->
+          <div class="date-wrapper">
+            <!-- classe pra usar o flex nos elementos label e input-->
+            <div class="input-wrapper">
+                <label for="event-date">Data</label>
+                <input type="date" id="event-date">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-date">Das</label>
+              <input type="time" id="event-date">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-date">Até</label>
+              <input type="time" id="event-date">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      
+      <!-- da pra fazer o button submit dentro e fora do formulário-->
+      <footer>
+        <input form="my-form" type="submit"
+        value="Salvar"
+        class="button">
+      </footer>
+     
+       
+    </form>
+  </div>
+</body>
+</html>
